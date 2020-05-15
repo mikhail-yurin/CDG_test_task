@@ -5,7 +5,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const mm = require('music-metadata');
 
-const buildPath = path.resolve(__dirname, 'public');
+const buildPath = path.resolve(__dirname, 'docs');
 
 module.exports = {
   mode: 'development',
