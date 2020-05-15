@@ -2,6 +2,7 @@
   "name": "cdg_test_app",
   "version": "1.0.0",
   "description": "",
+  "homepage": "index.html",
   "main": "index.js",
   "scripts": {
     "build": "webpack",
