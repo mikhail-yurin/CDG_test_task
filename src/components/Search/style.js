@@ -6,5 +6,5 @@ export const Search = styled.div`
 `;
 
 export const Input = styled.input`
-  width: 100%;
+  width: calc(100% - 4px);
 `;
