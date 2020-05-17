@@ -17,5 +17,6 @@ export default () => (dispatch) => {
       (response) => response.json(),
       (error) => dispatch(getTracklistFailure(error)),
     )
-    .then((json) => dispatch(getTracklistSuccess(json)));
+    .then((json) => dispatch(getTracklistSuccess(json)))
+    .catch((error) => dispatch(getTracklistFailure(error)));
 };
