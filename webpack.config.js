@@ -22,7 +22,7 @@ module.exports = {
     writeToDisk: true,
     before: (app) => {
       app.get('/tracklist', (req, res) => {
-        const soundsDir = path.resolve(__dirname, 'public', 'sounds');
+        const soundsDir = path.resolve(buildPath, 'sounds');
         fs.readdir(
           soundsDir,
           (err, files) => {
