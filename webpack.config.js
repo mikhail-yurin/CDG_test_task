@@ -8,13 +8,14 @@ const mm = require('music-metadata');
 const buildPath = path.resolve(__dirname, 'docs');
 
 module.exports = {
-  mode: 'development',
+  // mode: 'development',
+  // devtool: 'inline-source-map',
+  mode: 'production',
   entry: './src/index.jsx',
   output: {
     path: buildPath,
     filename: 'bundle.js',
   },
-  devtool: 'inline-source-map',
 
   // Mock for API
   devServer: {
@@ -90,6 +91,10 @@ module.exports = {
     new CopyWebpackPlugin([
       {
         from: path.resolve(__dirname, 'assets/static/index.html'),
+        to: buildPath,
+      },
+      {
+        from: path.resolve(__dirname, 'src/sw.js'),
         to: buildPath,
       },
       {

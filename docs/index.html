@@ -7,6 +7,16 @@
   <meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui" />
   <link rel="stylesheet" href="font-awesome.min.css">
   <script src="bundle.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js', { scope: './' })
+        .then((reg) => {
+          console.log('Registration succeeded. Scope is ' + reg.scope);
+        }).catch((error) => {
+          console.log('Registration failed with ' + error);
+        });
+    }
+  </script>
 </head>
 
 <body>
