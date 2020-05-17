@@ -12,7 +12,7 @@ export const getTracklistFailure = (error) => ({ type: GET_TRACKLIST_FAILURE, er
 export default () => (dispatch) => {
   dispatch(getTracklistPending());
 
-  fetch('/tracklist')
+  fetch('tracklist')
     .then(
       (response) => response.json(),
       (error) => dispatch(getTracklistFailure(error)),

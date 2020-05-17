@@ -12,7 +12,7 @@ export const getTrackFailure = (error) => ({ type: GET_TRACK_FAILURE, error });
 export default (fileName) => (dispatch) => {
   dispatch(getTrackPending());
 
-  fetch(`/sounds/${fileName}`)
+  fetch(`sounds/${fileName}`)
     .then(
       (response) => response.arrayBuffer(),
       (error) => dispatch(getTrackFailure(error)),
