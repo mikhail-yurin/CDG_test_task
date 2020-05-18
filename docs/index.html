@@ -97,6 +97,7 @@
             document.getElementById('app').style.display = 'none';
             worker.addEventListener('statechange', function () {
               if (worker.state == 'activated') {
+                location.reload();
                 document.getElementById('loader').style.display = 'none';
                 document.getElementById('app').style.display = 'block';
               }

@@ -83,7 +83,7 @@ class Player extends Component {
     return true;
   }
 
-  // TODO: rewrite it to use redux state instead of component state (it will be faster)
+  // TODO: try to use redux state instead of component state (it might be faster)
   handlePlaybackTime = (sec) => {
     this.setState({ playbackTime: sec });
   }
