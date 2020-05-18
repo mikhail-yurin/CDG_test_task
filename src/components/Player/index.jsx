@@ -142,6 +142,10 @@ class Player extends Component {
   playNext = () => {
     const { track, getTrackAction, trackList } = this.props;
 
+    if (!track.data) {
+      return;
+    }
+
     this.stopPlaying();
     playbackOffset = 0;
     this.handlePlaybackTime(0);
@@ -158,6 +162,10 @@ class Player extends Component {
 
   playPrev = () => {
     const { track, getTrackAction, trackList } = this.props;
+
+    if (!track.data) {
+      return;
+    }
 
     this.stopPlaying();
     playbackOffset = 0;
@@ -189,10 +197,14 @@ class Player extends Component {
 
   handlePlayPause = () => {
     const { isPlaying } = this.state;
-    if (isPlaying) {
-      this.stopPlaying();
-    } else {
-      this.startPlaying(0, playbackOffset);
+    const { track } = this.props;
+
+    if (track.data) {
+      if (isPlaying) {
+        this.stopPlaying();
+      } else {
+        this.startPlaying(0, playbackOffset);
+      }
     }
   };
 
