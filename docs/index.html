@@ -55,26 +55,22 @@
     }
 
     @-webkit-keyframes load7 {
-
       0%,
       80%,
       100% {
         box-shadow: 0 2.5em 0 -1.3em;
       }
-
       40% {
         box-shadow: 0 2.5em 0 0;
       }
     }
 
     @keyframes load7 {
-
       0%,
       80%,
       100% {
         box-shadow: 0 2.5em 0 -1.3em;
       }
-
       40% {
         box-shadow: 0 2.5em 0 0;
       }
@@ -100,11 +96,7 @@
           if (worker) {
             document.getElementById('app').style.display = 'none';
             worker.addEventListener('statechange', function () {
-              if (worker.state == 'redundant') {
-                document.getElementById('loader').style.display = 'none';
-                document.getElementById('app').style.display = 'block';
-              }
-              if (worker.state == 'installed') {
+              if (worker.state == 'activated') {
                 document.getElementById('loader').style.display = 'none';
                 document.getElementById('app').style.display = 'block';
               }

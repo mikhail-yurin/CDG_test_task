@@ -35,12 +35,6 @@ const staticTracklist = [
     duration: '149',
   },
   {
-    path: 'superSYMMETRY_JOURNEYthroughTIME2-160.mp3',
-    artist: 'superSYMMETRY',
-    title: 'JOURNEY_through_TIME',
-    duration: '430',
-  },
-  {
     path: 'tylersrevenge_a-dark-and-stormy-nigh-160.mp3',
     artist: 'tylersrevenge',
     title: 'a dark and stormy night',

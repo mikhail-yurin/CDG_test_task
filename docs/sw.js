@@ -9,7 +9,6 @@ self.addEventListener('install', (event) => {
         'sounds/Peppy--The-Firing-Squad_YMXB-160.mp3',
         'sounds/earthling_Light-Years-Away-160.mp3',
         'sounds/subcycle_111---undergroundinvaders-160.mp3',
-        'sounds/superSYMMETRY_JOURNEYthroughTIME2-160.mp3',
         'sounds/tylersrevenge_a-dark-and-stormy-nigh-160.mp3',
         'sounds/vibesbuilderyahoode_Sparse---Youre-t-160.mp3',
       ])),
@@ -17,7 +16,9 @@ self.addEventListener('install', (event) => {
 });
 
 // Activate
-self.addEventListener('activate', () => { });
+self.addEventListener('activate', () => {
+  console.log('service worker now ready to handle fetches');
+});
 
 // Listen for network requests
 self.addEventListener('fetch', (event) => {

@@ -72,9 +72,6 @@ module.exports = {
           'css-loader', // translates CSS into CommonJS
           'sass-loader', // compiles Sass to CSS, using Node Sass by default
         ],
-        // }, {
-        //   test: /\.(jpe?g|png|gif)$/,
-        //   loader: 'file-loader'
       }, {
         test: /\.(svg|eot|woff|ttf)$/,
         loader: 'file-loader',
