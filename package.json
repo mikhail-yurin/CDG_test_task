@@ -12,7 +12,7 @@
   "author": "Mikhail Yurin",
   "license": "ISC",
   "dependencies": {
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "music-metadata": "^6.4.0",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
